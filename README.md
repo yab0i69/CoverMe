@@ -1,2 +1,2 @@
 # CoverMe
-  By Gavin Dilts, Tyce Rienstra, 
+  By Gavin Dilts, Tyce Rienstra, Dana Aung
