@@ -28,6 +28,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser, Applicati
     public DbSet<Log> ServiceLog { get; set; }
     public DbSet<AuditLog> AuditLog { get; set; }
     public DbSet<ActivityLog> ActivityLog { get; set; }
+    public DbSet<Widget> Widget { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
