@@ -257,7 +257,7 @@ public class AccountController : BaseController<AccountController>
                 await _activityLogger.AddLog("identity", "login", user.Id);
                 _logger.LogInformation("User created a new account with password.");
 
-                return RedirectToLocal(returnUrl);
+                return RedirectToLocal(returnUrl + "?register=true");
             }
             AddErrors(result);
         }

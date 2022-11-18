@@ -11,7 +11,7 @@
           <div class="text-center mb-2">
               <a href="." class="navbar-brand navbar-brand-autodark"><img src="@Settings.LogoImageUrlSmall" style="height: 4rem" alt=""></a>
           </div>
-          <form class="card card-md" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" autocomplete="off">
+          <form class="card card-md" id="registerForm" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" autocomplete="off">
               <div class="card-body">
                   <h2 class="card-title text-center mb-4">Sign up for a new account</h2>
                   <div asp-validation-summary="All" class="text-danger py-2"></div>
@@ -49,7 +49,8 @@
                       <span asp-validation-for="ConfirmPassword" class="text-danger"></span>                          
                   </div>
                   <div class="form-footer">
-                      <button type="submit" class="btn btn-primary w-100">Register</button>
+                        <button type="submit" class="btn btn-primary w-100">Register</button>
+                       
                   </div>
               </div>
           </form>
@@ -62,6 +63,8 @@
 
 
 @section Scripts {
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     @await Html.PartialAsync("_ValidationScriptsPartial")
     
     <script type="text/javascript">
@@ -69,5 +72,6 @@
             var x = document.getElementById(elemid);
             x.type = x.type === "password" ? "text" : "password";
         }
+
     </script>
 }

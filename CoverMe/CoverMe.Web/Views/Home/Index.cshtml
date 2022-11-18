@@ -1,4 +1,5 @@
-﻿@{
+﻿@model CoverMe.Web.Models.HomePageModel
+@{
     ViewData["Title"] = "Home Page";
     Layout = "~/Views/Shared/Layouts/Front/_Layout.cshtml";
 }
@@ -254,3 +255,29 @@
                 </div>
             </div>
         </section>
+
+
+@section Scripts {
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script type="text/javascript">
+
+
+        $(document).ready(function () {
+
+            if (@Model.NewRegister.ToString().ToLower())
+            {
+                Swal.fire({
+                    title: 'WOAH!',
+                    text: "Make sure to confirm your email address",
+                    icon: 'warning',
+                }).then((result) => {
+
+                });
+            }
+
+        });
+
+    </script>
+
+}
