@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using CoverMe.Web.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoverMe.Web.Controllers;
@@ -7,9 +8,13 @@ namespace CoverMe.Web.Controllers;
 [ApiExplorerSettings(IgnoreApi = true)]
 public class HomeController : BaseController<HomeController>
 {
-    public IActionResult Index()
+    public IActionResult Index(bool? register)
     {
-        return View();
+        HomePageModel vm = new HomePageModel { 
+            NewRegister = register ?? false
+        };
+
+        return View(vm);
     }
 
     // Template actions
