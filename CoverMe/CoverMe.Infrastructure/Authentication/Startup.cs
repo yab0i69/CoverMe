@@ -40,6 +40,11 @@ public static class Startup
 					ValidateAudience = false
 				};
 			});
+			.AddGoogle(googleOptions =>
+    			{
+       			 	googleOptions.ClientId = configuration["Authentication:Google:ClientId"];
+        			googleOptions.ClientSecret = configuration["Authentication:Google:ClientSecret"];
+    			});
 
         services.ConfigureApplicationCookie(options =>
         {
