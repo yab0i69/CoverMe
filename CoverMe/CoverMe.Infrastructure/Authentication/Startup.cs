@@ -1,4 +1,4 @@
-﻿using System.Text;
+using System.Text;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
@@ -51,6 +51,7 @@ public static class Startup
                     return Task.CompletedTask;
                 };
             });
+
 
         services.ConfigureApplicationCookie(options =>
         {
