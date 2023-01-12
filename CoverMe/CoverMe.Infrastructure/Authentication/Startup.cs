@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using CoverMe.Domain.DTOs.Authentication;
 using CoverMe.Domain.Entities.Settings;
+using Microsoft.Extensions.Options;
 
 namespace CoverMe.Infrastructure.Authentication;
 
@@ -39,7 +40,17 @@ public static class Startup
 					ValidateIssuer = false,
 					ValidateAudience = false
 				};
-			});
+			})
+			.AddGoogle(googleOptions =>
+            {
+                googleOptions.ClientId = configuration["Authentication:Google:ClientId"];
+                googleOptions.ClientSecret = configuration["Authentication:Google:ClientSecret"];
+                googleOptions.Events.OnRedirectToAuthorizationEndpoint = context =>
+                {
+                    context.Response.Redirect(context.RedirectUri + "&prompt=consent");
+                    return Task.CompletedTask;
+                };
+            });
 
         services.ConfigureApplicationCookie(options =>
         {

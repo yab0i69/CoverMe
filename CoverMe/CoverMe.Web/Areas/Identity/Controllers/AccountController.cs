@@ -293,6 +293,8 @@ public class AccountController : BaseController<AccountController>
     [AllowAnonymous]
     public async Task<IActionResult> ExternalLoginCallback(string returnUrl = null, string remoteError = null)
     {
+        returnUrl ??= "/dashboard/home";
+
         if (remoteError != null)
         {
             ErrorMessage = $"Error from external provider: {remoteError}";

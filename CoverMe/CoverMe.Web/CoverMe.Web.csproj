@@ -3,7 +3,8 @@
 	<PropertyGroup>
 		<TargetFramework>net6</TargetFramework>
 		<DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
-	</PropertyGroup>
+	  <UserSecretsId>a76ee824-6559-421d-ae57-549ea5fa3c53</UserSecretsId>
+  </PropertyGroup>
 
 	<PropertyGroup>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
