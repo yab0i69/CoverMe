@@ -4,7 +4,7 @@ namespace CoverMe.Web.Controllers
 {
     public class CalandarController : Controller
     {
-        public IActionResult Calandar()
+        public IActionResult Index()
         {
             return View();
         }
