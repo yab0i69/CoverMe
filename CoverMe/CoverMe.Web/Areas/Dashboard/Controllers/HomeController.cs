@@ -35,4 +35,11 @@ public class HomeController : BaseController<HomeController>
 
         return View(viewModel);
     }
+
+    public IActionResult Test ()
+    {
+        var vm = new TestViewModel { Title = "This is a test piece of data" };
+
+        return View(vm);
+    }
 }
