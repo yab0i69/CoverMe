@@ -2,6 +2,11 @@
 {
     public class TestViewModel
     {
-        public string Title { get; set; }
+        //dont touch, using for reference.
+       public string Title { get; set; }
+      
+        public string Firstname { get; set; }
+        public string Lastname { get; set; }
+        public string date { get; set; }
     }
 }

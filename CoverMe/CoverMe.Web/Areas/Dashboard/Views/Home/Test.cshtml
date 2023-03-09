@@ -1,3 +1,36 @@
 ﻿@model CoverMe.Web.Areas.Dashboard.Models.HomeViewModels.TestViewModel
 
-<h1>@Model.Title</h1>
+<div class="card">
+	<div class="card-body">
+		<form asp-action="Edit">
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+			<div class="tab-content">
+				<div class="tab-pane show active" id="tabs-core">
+					<div class="row pt-2 pb-3">
+						<div class="col">
+							<p class="m-0 text">Please fill all relevant forms.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-3">
+							<div class="form-group">
+								<label asp-for="Firstname" class="control-label"></label>
+								<input asp-for="Firstname" class="form-control" />
+								<span asp-validation-for="Firstname" class="text-danger"></span>
+								<label asp-for="Lastname" class="control-label"></label>
+								<input asp-for="Lastname" class="form-control" />
+								<span asp-validation-for="Lastname" class="text-danger"></span>
+								<label asp-for="date" class="control-label"></label>
+								<input asp-for="date" class="ti-calendar-event" />
+								<span asp-validation-for="date" class="text-danger"></span>
+							</div>
+						</div>
+					</div>
+					<div class="form-group mt-3">
+						<input type="submit" value="Save" class="btn btn-primary" />
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

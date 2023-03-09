@@ -36,6 +36,13 @@ public class HomeController : BaseController<HomeController>
         return View(viewModel);
     }
 
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Edit([Bind("Firstname,Lastname")] TestViewModel model)
+    {
+        return RedirectToAction("Index");
+    }
+
     public IActionResult Test ()
     {
         var vm = new TestViewModel { Title = "This is a test piece of data" };
