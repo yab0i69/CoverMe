@@ -2,6 +2,7 @@
 
 <div class="card">
 	<div class="card-body">
+        
 		<form asp-action="Edit">
 			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 			<div class="tab-content">
@@ -15,14 +16,22 @@
 						<div class="col-md-3">
 							<div class="form-group">
 								<label asp-for="Firstname" class="control-label"></label>
-								<input asp-for="Firstname" class="form-control" />
+								 <input asp-for="Firstname" class="form-control" />
 								<span asp-validation-for="Firstname" class="text-danger"></span>
 								<label asp-for="Lastname" class="control-label"></label>
 								<input asp-for="Lastname" class="form-control" />
 								<span asp-validation-for="Lastname" class="text-danger"></span>
 								<label asp-for="date" class="control-label"></label>
-								<input asp-for="date" class="ti-calendar-event" />
-								<span asp-validation-for="date" class="text-danger"></span>
+								<input asp-for="date" class="date-item" />
+                                <span asp-validation-for="date" class="text-danger"></span>
+								<script>
+									localStorage.setItem('Firstname');
+                                    localStorage.setItem('Lastname');
+                                    localStorage.setItem('date');
+									localStorage.setItem('Data'), document.getElementById("firstname") document.getElementById("lastname") document.getElementById("Date")
+									</script>
+                                
+								
 							</div>
 						</div>
 					</div>
@@ -31,6 +40,7 @@
 					</div>
 				</div>
 			</div>
+			
 		</form>
 	</div>
 </div>
