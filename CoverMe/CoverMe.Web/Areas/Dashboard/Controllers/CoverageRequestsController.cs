@@ -16,9 +16,9 @@ using System.ComponentModel.DataAnnotations;
 using CoverMe.Domain.Entities;
 using CoverMe.Infrastructure.Persistence.DbContexts;
 
-namespace CoverMe.Web.Areas.Admin.Controllers;
+namespace CoverMe.Web.Areas.Dashboard.Controllers;
 
-[Area("Admin")]
+[Area("Dashboard")]
 [Authorize(Roles = "Admin")]
 public class CoverageRequestsController : BaseController<CoverageRequestsController>
 {
@@ -34,7 +34,7 @@ public class CoverageRequestsController : BaseController<CoverageRequestsControl
 
 	private const string createBindingFields = "Id,Firstname,Lastname,Date,Approval";
     private const string editBindingFields = "Id,Firstname,Lastname,Date,Approval";
-    private const string areaTitle = "Admin";
+    private const string areaTitle = "Dashboard";
 
     private readonly ApplicationDbContext _context;
 
@@ -43,7 +43,7 @@ public class CoverageRequestsController : BaseController<CoverageRequestsControl
         _context = context;
     }
 
-    // GET: Admin/CoverageRequests
+    // GET: Dashboard/CoverageRequests
     public IActionResult Index()
     {
         _breadcrumbs.StartAtAction("Dashboard", "Index", "Home", new { Area = "Dashboard" })
@@ -55,12 +55,12 @@ public class CoverageRequestsController : BaseController<CoverageRequestsControl
 		return View(metadata);
    }
 
-    // GET: Admin/CoverageRequests/Details/5
+    // GET: Dashboard/CoverageRequests/Details/5
     public async Task<IActionResult> Details(int? id)
     {
         ViewData["AreaTitle"] = areaTitle;
         _breadcrumbs.StartAtAction("Dashboard", "Index", "Home", new { Area = "Dashboard" })
-            .ThenAction("Manage CoverageRequest", "Index", "CoverageRequests", new { Area = "Admin" })
+            .ThenAction("Manage CoverageRequest", "Index", "CoverageRequests", new { Area = "Dashboard" })
             .Then("CoverageRequest Details");            
 
         if (id == null)
@@ -78,17 +78,17 @@ public class CoverageRequestsController : BaseController<CoverageRequestsControl
         return View(coverageRequest);
     }
 
-    // GET: Admin/CoverageRequests/Create
+    // GET: Dashboard/CoverageRequests/Create
     public IActionResult Create()
     {
         _breadcrumbs.StartAtAction("Dashboard", "Index", "Home", new { Area = "Dashboard" })
-            .ThenAction("Manage CoverageRequest", "Index", "CoverageRequests", new { Area = "Admin" })
+            .ThenAction("Manage CoverageRequest", "Index", "CoverageRequests", new { Area = "Dashboard" })
             .Then("Create CoverageRequest");     
 
        return View();
 	}
 
-    // POST: Admin/CoverageRequests/Create
+    // POST: Dashboard/CoverageRequests/Create
     // To protect from overposting attacks, enable the specific properties you want to bind to.
     // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
     [HttpPost]
@@ -98,7 +98,7 @@ public class CoverageRequestsController : BaseController<CoverageRequestsControl
         ViewData["AreaTitle"] = areaTitle;
 
         _breadcrumbs.StartAtAction("Dashboard", "Index", "Home", new { Area = "Dashboard" })
-        .ThenAction("Manage CoverageRequest", "Index", "CoverageRequestsController", new { Area = "Admin" })
+        .ThenAction("Manage CoverageRequest", "Index", "CoverageRequestsController", new { Area = "Dashboard" })
         .Then("Create CoverageRequest");     
         
         // Remove validation errors from fields that aren't in the binding field list
@@ -116,13 +116,13 @@ public class CoverageRequestsController : BaseController<CoverageRequestsControl
         return View(coverageRequest);
     }
 
-    // GET: Admin/CoverageRequests/Edit/5
+    // GET: Dashboard/CoverageRequests/Edit/5
     public async Task<IActionResult> Edit(int? id)
     {
         ViewData["AreaTitle"] = areaTitle;
 
         _breadcrumbs.StartAtAction("Dashboard", "Index", "Home", new { Area = "Dashboard" })
-        .ThenAction("Manage CoverageRequest", "Index", "CoverageRequests", new { Area = "Admin" })
+        .ThenAction("Manage CoverageRequest", "Index", "CoverageRequests", new { Area = "Dashboard" })
         .Then("Edit CoverageRequest");     
 
         if (id == null)
@@ -140,7 +140,7 @@ public class CoverageRequestsController : BaseController<CoverageRequestsControl
         return View(coverageRequest);
     }
 
-    // POST: Admin/CoverageRequests/Edit/5
+    // POST: Dashboard/CoverageRequests/Edit/5
     // To protect from overposting attacks, enable the specific properties you want to bind to.
     // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
     [HttpPost]
@@ -150,7 +150,7 @@ public class CoverageRequestsController : BaseController<CoverageRequestsControl
         ViewData["AreaTitle"] = areaTitle;
 
         _breadcrumbs.StartAtAction("Dashboard", "Index", "Home", new { Area = "Dashboard" })
-        .ThenAction("Manage CoverageRequest", "Index", "CoverageRequests", new { Area = "Admin" })
+        .ThenAction("Manage CoverageRequest", "Index", "CoverageRequests", new { Area = "Dashboard" })
         .Then("Edit CoverageRequest");  
     
         if (id != coverageRequest.Id)
@@ -190,13 +190,13 @@ public class CoverageRequestsController : BaseController<CoverageRequestsControl
         return View(coverageRequest);
     }
 
-    // GET: Admin/CoverageRequests/Delete/5
+    // GET: Dashboard/CoverageRequests/Delete/5
     public async Task<IActionResult> Delete(int? id)
     {
         ViewData["AreaTitle"] = areaTitle;
 
         _breadcrumbs.StartAtAction("Dashboard", "Index", "Home", new { Area = "Dashboard" })
-        .ThenAction("Manage CoverageRequest", "Index", "CoverageRequests", new { Area = "Admin" })
+        .ThenAction("Manage CoverageRequest", "Index", "CoverageRequests", new { Area = "Dashboard" })
         .Then("Delete CoverageRequest");  
 
         if (id == null)
@@ -214,7 +214,7 @@ public class CoverageRequestsController : BaseController<CoverageRequestsControl
         return View(coverageRequest);
     }
 
-    // POST: Admin/CoverageRequests/Delete/5
+    // POST: Dashboard/CoverageRequests/Delete/5
     [HttpPost, ActionName("Delete")]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> DeleteConfirmed(int id)
