@@ -199,20 +199,17 @@
 		</div>
 		<div class="col">
 			<div class="text-truncate">
-                                            <strong 
-												</strong> <strong> coverage </strong> 
+                                             <strong> coverage </strong> 
                                                <script>
-												
-												localStorage.getItem('Firstname');
-												localStorage.getItem('Lastname');
-												localStorage.getItem('date');
-                                                localStorage.getItem('Data');
-                                                document.write(localStorage.getItem('Data'));
-												document.write(localStorage.getItem('date'));
-												document.write(localStorage.getItem('Firstname'));
-                                                document.write(localStorage.getItem('Lastname'));
+                                                let Data = document.cookie;
+                                                document.write(Data);
                                                   </script>
-                                          
+                                        </div>
+                                        <div class="text-muted"> Just now
+                                                  <script>
+                                                document.write(localStorage.getItem('Data'));
+												  </script>
+                                          </div>
                                                
 																
                                                

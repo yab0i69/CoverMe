@@ -38,7 +38,7 @@ public class HomeController : BaseController<HomeController>
 
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Edit([Bind("Firstname,Lastname")] TestViewModel model)
+    public async Task<IActionResult> Edit([Bind("Firstname,Lastname,Date")] TestViewModel model)
     {
         return RedirectToAction("Index");
     }
