@@ -14,7 +14,7 @@
 					Overview
 				</div>
 				<h2 class="page-title">
-					@Model.User.FullName.Trim()'s Dashboard
+					@Model.User.UserName.Trim()'s Dashboard
 				</h2>
 			</div>
 			<!-- Page title actions -->
@@ -25,13 +25,11 @@
 								View Test Page
 						</span>
 					</a>
-					<a href="homecontroller1" class="btn btn-primary d-none d-sm-inline-block" data-bs-toggle="modal" data-bs-target="#modal-report">
-						<!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-						<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-							<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line>
-						</svg>
-						Create Coverage
-					</a>
+					<span class="d-none d-sm-inline">
+						<a href="#" class="btn btn-white">
+							Join Business
+						</a>
+					</span>
 					<a href="#" class="btn btn-primary d-sm-none btn-icon" data-bs-toggle="modal" data-bs-target="#modal-report" aria-label="Create new report">
 						<!-- Download SVG icon from http://tabler-icons.io/i/plus -->
 						<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -44,6 +42,8 @@
 	</div>
 </div>
 
+@{
+	/*
 <!-- SAMPLE TABLER DASHBOARD -->
 <div class="row row-deck row-cards">
 <div class="col-12">
@@ -53,6 +53,7 @@
 				<div class="card-body">
 					<div class="row align-items-center">
 						<div class="col-auto">
+<<<<<<< Updated upstream
 							<span class="bg-blue text-white avatar">
 
 								<!-- Download SVG icon from http://tabler-icons.io/i/currency-dollar -->
@@ -128,6 +129,8 @@
 				<div class="card-body">
 					<div class="row align-items-center">
 						<div class="col-auto">
+=======
+>>>>>>> Stashed changes
 							<span class="bg-facebook text-white avatar">
 
 								<!-- Download SVG icon from http://tabler-icons.io/i/brand-facebook -->
@@ -150,6 +153,7 @@
 		</div>
 	</div>
 </div>
+
 
 
 <div class="col-lg-12">
@@ -186,113 +190,45 @@
 			</div>
 		</div>
 	</div>
+<<<<<<< Updated upstream
             </div>
             
-<div class="col-12">
-<div class="card" style="height: 28rem">
-<div class="card-body card-body-scrollable card-body-scrollable-shadow">
-<div class="divide-y">
-<div>
-	<div class="row">
-		<div class="col-auto">
-			<span class="avatar">JL</span>
-		</div>
-		<div class="col">
-			<div class="text-truncate">
-                                             <strong> coverage </strong> 
-                                               <script>
-                                                let Data = document.cookie;
-                                                document.write(Data);
-                                                  </script>
-                                        </div>
-                                        <div class="text-muted"> Just now
-                                                  <script>
-                                                document.write(localStorage.getItem('Data'));
-												  </script>
-                                          </div>
-                                               
-																
-                                               
-                                            
-                                            
-			</div>
-			<div class="text-muted">yesterday</div>
-		</div>
-		<div class="col-auto align-self-center">
-			<div class="badge bg-primary"></div>
-		</div>
-	</div>
+=======
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
+*/
+}
 
 <div class="col-md-12 col-lg-8">
 <div class="card">
 <div class="card-header">
-	<h3 class="card-title">Most Visited Pages</h3>
+	<h3 class="card-title">Calls Off</h3>
 </div>
 <div class="card-table table-responsive">
 <table class="table table-vcenter">
 <thead>
 <tr>
-	<th>Page name</th>
-	<th>Visitors</th>
-	<th>Unique</th>
-	<th colspan="2">Bounce rate</th>
+	<th>Employee Name</th>
+	<th>Day</th>
+	<th>Month</th>
+	<th colspan="2">Year</th>
 </tr>
 </thead>
 <tbody>
 
 <tr>
 	<td>
-		/about.html
-		<a href="#" class="ms-1" aria-label="Open website">
-
-			<!-- Download SVG icon from http://tabler-icons.io/i/link -->
-			<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-				<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5"></path><path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5"></path>
-			</svg>
-		</a>
-	</td>
-	<td class="text-muted">4,896</td>
-	<td class="text-muted">3,654</td>
-	<td class="text-muted">82.54%</td>
-	<td class="text-end w-1">
-		<div class="chart-sparkline chart-sparkline-sm" id="sparkline-bounce-rate-1" style="min-height: 24px;">
-			<div id="apexchartsql6fkl85" class="apexcharts-canvas apexchartsql6fkl85 apexcharts-theme-light" style="width: 64px; height: 24px;">
-				<svg id="SvgjsSvg1573" width="64" height="24" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev" class="apexcharts-svg" xmlns:data="ApexChartsNS" transform="translate(0, 0)" style="background: transparent;">
-					<g id="SvgjsG1575" class="apexcharts-inner apexcharts-graphical" transform="translate(0, 0)">
-						<defs id="SvgjsDefs1574">
-							<clipPath id="gridRectMaskql6fkl85">
-								<rect id="SvgjsRect1581" width="70" height="26" x="-3" y="-1" rx="0" ry="0" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0" fill="#fff"></rect>
-							</clipPath><clipPath id="forecastMaskql6fkl85"></clipPath><clipPath id="nonForecastMaskql6fkl85"></clipPath>
-							<clipPath id="gridRectMarkerMaskql6fkl85">
-								<rect id="SvgjsRect1582" width="68" height="28" x="-2" y="-2" rx="0" ry="0" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0" fill="#fff"></rect>
-							</clipPath>
-						</defs><line id="SvgjsLine1580" x1="0" y1="0" x2="0" y2="24" stroke="#b6b6b6" stroke-dasharray="3" stroke-linecap="butt" class="apexcharts-xcrosshairs" x="0" y="0" width="1" height="24" fill="#b1b9c4" filter="none" fill-opacity="0.9" stroke-width="1"></line>
-						<g id="SvgjsG1588" class="apexcharts-xaxis" transform="translate(0, 0)">
-							<g id="SvgjsG1589" class="apexcharts-xaxis-texts-g" transform="translate(0, 4)"></g>
-						</g>
-						<g id="SvgjsG1600" class="apexcharts-grid">
-							<g id="SvgjsG1601" class="apexcharts-gridlines-horizontal" style="display: none;">
-								<line id="SvgjsLine1603" x1="0" y1="0" x2="64" y2="0" stroke="#e0e0e0" stroke-dasharray="0" stroke-linecap="butt" class="apexcharts-gridline"></line><line id="SvgjsLine1604" x1="0" y1="6" x2="64" y2="6" stroke="#e0e0e0" stroke-dasharray="0" stroke-linecap="butt" class="apexcharts-gridline"></line><line id="SvgjsLine1605" x1="0" y1="12" x2="64" y2="12" stroke="#e0e0e0" stroke-dasharray="0" stroke-linecap="butt" class="apexcharts-gridline"></line><line id="SvgjsLine1606" x1="0" y1="18" x2="64" y2="18" stroke="#e0e0e0" stroke-dasharray="0" stroke-linecap="butt" class="apexcharts-gridline"></line><line id="SvgjsLine1607" x1="0" y1="24" x2="64" y2="24" stroke="#e0e0e0" stroke-dasharray="0" stroke-linecap="butt" class="apexcharts-gridline"></line>
-							</g><g id="SvgjsG1602" class="apexcharts-gridlines-vertical" style="display: none;"></g><line id="SvgjsLine1609" x1="0" y1="24" x2="64" y2="24" stroke="transparent" stroke-dasharray="0" stroke-linecap="butt"></line><line id="SvgjsLine1608" x1="0" y1="1" x2="0" y2="24" stroke="transparent" stroke-dasharray="0" stroke-linecap="butt"></line>
-						</g>
-						<g id="SvgjsG1583" class="apexcharts-line-series apexcharts-plot-series">
-							<g id="SvgjsG1584" class="apexcharts-series" seriesname="seriesx1" data:longestseries="true" rel="1" data:realindex="0">
-								<path id="SvgjsPath1587" d="M 0 7L 8 0L 16 4L 24 14L 32 19L 40 23L 48 20L 56 6L 64 11" fill="none" fill-opacity="1" stroke="rgba(32,107,196,0.85)" stroke-opacity="1" stroke-linecap="round" stroke-width="2" stroke-dasharray="0" class="apexcharts-line" index="0" clip-path="url(#gridRectMaskql6fkl85)" pathto="M 0 7L 8 0L 16 4L 24 14L 32 19L 40 23L 48 20L 56 6L 64 11" pathfrom="M -1 24L -1 24L 8 24L 16 24L 24 24L 32 24L 40 24L 48 24L 56 24L 64 24"></path><g id="SvgjsG1585" class="apexcharts-series-markers-wrap" data:realindex="0"></g>
-							</g><g id="SvgjsG1586" class="apexcharts-datalabels" data:realindex="0"></g>
-						</g><line id="SvgjsLine1610" x1="0" y1="0" x2="64" y2="0" stroke="#b6b6b6" stroke-dasharray="0" stroke-width="1" stroke-linecap="butt" class="apexcharts-ycrosshairs"></line><line id="SvgjsLine1611" x1="0" y1="0" x2="64" y2="0" stroke-dasharray="0" stroke-width="0" stroke-linecap="butt" class="apexcharts-ycrosshairs-hidden"></line><g id="SvgjsG1612" class="apexcharts-yaxis-annotations"></g><g id="SvgjsG1613" class="apexcharts-xaxis-annotations"></g><g id="SvgjsG1614" class="apexcharts-point-annotations"></g>
-					</g><rect id="SvgjsRect1579" width="0" height="0" x="0" y="0" rx="0" ry="0" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0" fill="#fefefe"></rect><g id="SvgjsG1599" class="apexcharts-yaxis" rel="0" transform="translate(-18, 0)"></g><g id="SvgjsG1576" class="apexcharts-annotations"></g>
-				</svg>
-				<div class="apexcharts-legend" style="max-height: 12px;"></div>
-			</div>
+		<div class="col-auto">
+			<span class="avatar">JL</span><strong>Jeffie Lewzey</strong>
 		</div>
+		<div class="col">
+			<div class="text-muted">yesterday</div>
+		</div>
+	</td>
+	<td class="text-muted"></td>
+	<td class="text-muted"></td>
+	<td class="text-muted"></td>
+	<td class="text-muted"></td>
+	<td class="text-end w-1">
 	</td>
 </tr>
 <tr>
@@ -618,6 +554,4 @@
 	</div>
 </div>
 
-
-</div>
 <!-- END SAMPLE TABLER DASHBOARD -->
