@@ -19,7 +19,7 @@ using CoverMe.Infrastructure.Persistence.DbContexts;
 namespace CoverMe.Web.Areas.Dashboard.Controllers;
 
 [Area("Dashboard")]
-[Authorize(Roles = "Admin")]
+[Authorize]
 public class CoverageRequestsController : BaseController<CoverageRequestsController>
 {
 	public class CoverageRequestIndexViewModel 

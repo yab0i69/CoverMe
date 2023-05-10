@@ -14,7 +14,11 @@
 @if (SignInManager.IsSignedIn(User))
 {
 	var user = await UserManager.GetUserAsync(User);
-	var role = (await UserManager.GetRolesAsync(user)).FirstOrDefault();
+
+    if (user is null)
+        await SignInManager.SignOutAsync();
+
+    var role = user is null ? "" : (await UserManager.GetRolesAsync(user)).FirstOrDefault() ?? "";
 
     <div class="nav-item dropdown d-none d-md-flex me-3">
         <a href="#" class="nav-link px-0" data-bs-toggle="dropdown" tabindex="-1" aria-label="Show notifications">

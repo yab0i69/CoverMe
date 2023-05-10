@@ -253,6 +253,7 @@ public class AccountController : BaseController<AccountController>
                 await _emailSender.SendEmailConfirmationAsync(model.Email, callbackUrl);
 
                 await _signInManager.SignInAsync(user, isPersistent: false);
+                await _userManager.AddToRoleAsync(user, "User");
 
                 await _activityLogger.AddLog("identity", "login", user.Id);
                 _logger.LogInformation("User created a new account with password.");
@@ -348,6 +349,7 @@ public class AccountController : BaseController<AccountController>
                 if (result.Succeeded)
                 {
                     await _signInManager.SignInAsync(user, isPersistent: false);
+                    await _userManager.AddToRoleAsync(user, "User");
                     _logger.LogInformation("User created an account using {Name} provider.", info.LoginProvider);
                     return RedirectToLocal(returnUrl);
                 }
